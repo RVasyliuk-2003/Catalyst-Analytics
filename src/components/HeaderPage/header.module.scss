@@ -1,1 +1,39 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 86px;
 
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    > img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__logo_text {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  &__links {
+    display: flex;
+    gap: 18px;
+    color: var(--text-p-gray);
+  }
+
+  &__contactButton {
+    font-family: var(--font-barlow);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: var(--btn-blue);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 10px;
+    border: none;
+  }
+}

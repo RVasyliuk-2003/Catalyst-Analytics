@@ -3,9 +3,20 @@
   --bg-card: #141414;
   --text-blue: #0a84ff;
   --btn-blue: #0a84ff;
-  --btn-blue: #0a84ff;
   --text-p-gray: #8e8e93;
 
   --font-barlow: "Barlow", sans-serif;
   --font-roboto: "Roboto Flex", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+  font-family: var(--font-barlow);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding: 20px; */
 }
