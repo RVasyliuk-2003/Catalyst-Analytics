@@ -9,9 +9,11 @@ import email from "./images/email.svg";
 import phone from "./images/phone.svg";
 import location from "./images/location.svg";
 
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer className={`container ${style.footer}`}>
+    <footer className={style.footer}>
       <nav className={style.nav}>
         <div className={style.nav__logo}>
           <img src={logo} alt="Logo" />
@@ -21,11 +23,11 @@ const Footer = () => {
         </div>
 
         <div className={style.nav__links}>
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Portfolio</a>
-          <a href="#">About Us</a>
-          <a href="#">Career</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/about-us">About Us</NavLink>
+          <NavLink to="/career">Career</NavLink>
         </div>
 
         <div className={style.nav__contactButton}>

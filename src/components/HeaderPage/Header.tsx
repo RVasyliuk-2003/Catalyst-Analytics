@@ -1,9 +1,11 @@
 import style from "./header.module.scss";
 import logo from "./../../assets/images/Logo.webp";
 
+import { Link, NavLink } from "react-router-dom";
+
 const Header = () => {
   return (
-    <header className="container">
+    <header>
       <nav className={style.nav}>
         <div className={style.nav__logo}>
           <img src={logo} alt="Logo" />
@@ -13,16 +15,16 @@ const Header = () => {
         </div>
 
         <div className={style.nav__links}>
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Portfolio</a>
-          <a href="#">About Us</a>
-          <a href="#">Career</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/about-us">About Us</NavLink>
+          <NavLink to="/career">Career</NavLink>
         </div>
 
-        <a className={style.nav__contactButton} href="#">
+        <Link to="/contact-us" className={style.nav__contactButton}>
           Contact Us
-        </a>
+        </Link>
       </nav>
     </header>
   );
