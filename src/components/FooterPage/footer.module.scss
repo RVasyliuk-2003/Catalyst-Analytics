@@ -1,0 +1,94 @@
+.footer {
+  padding: 50px 86px;
+
+  &__contact {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contact_info {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__contact_link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-p-gray);
+
+    font-size: 1.12rem;
+
+    > img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__policy_links {
+    display: flex;
+    gap: 24px;
+    color: rgb(111, 111, 111);
+
+    font-size: 1.12rem;
+  }
+
+  &__copyright {
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(111, 111, 111);
+    font-size: 1.12rem;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    > img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__logo_text {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  &__links {
+    display: flex;
+    gap: 18px;
+    color: var(--text-p-gray);
+  }
+
+  &__contactButton {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid rgb(59, 59, 59);
+  }
+
+  &__media_link {
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #2e2e2e 0%, rgba(46, 46, 46, 0) 100%);
+    // border-image: linear-gradient(180deg, #2e2e2e 0%, rgba(46, 46, 46, 0) 100%);
+
+    > img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
