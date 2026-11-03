@@ -1,0 +1,58 @@
+.partnerSlider {
+  padding: 40px 0px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+
+    background:
+      linear-gradient(to right, #0a84ff, transparent),
+      linear-gradient(to left, #8961ff, transparent);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+
+    background:
+      linear-gradient(to right, #0a84ff, transparent),
+      linear-gradient(to left, #8961ff, transparent);
+  }
+
+  &__containerImg {
+    display: flex;
+    align-items: center;
+    gap: 135px;
+    width: max-content;
+
+    animation: scrollAnimation 20s linear infinite;
+
+    will-change: transform;
+    transform: translateZ(0);
+
+    > img {
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    // Зсуваємо контейнер вліво рівно на половину його ширини
+    // (тобто на довжину першого набору з 6 картинок)
+    transform: translateX(-50%);
+  }
+}
