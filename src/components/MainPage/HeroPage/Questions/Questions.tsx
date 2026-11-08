@@ -18,20 +18,18 @@ const Questions = () => {
               isOpen === id ? style.questions__card_bg : ""
             }`}
           >
-            <div className={style.questions__card__number_card}>
-              <b style={{ color: isOpen === id ? "var(--text-blue)" : "#fff" }}>
-                {ell.number}
-              </b>
-            </div>
+            <div className={style.questions__card__header}>
+              <div className={style.questions__card__number_card}>
+                <b
+                  style={{
+                    color: isOpen === id ? "var(--text-blue)" : "#fff",
+                  }}
+                >
+                  {ell.number}
+                </b>
+              </div>
 
-            <div
-              className={
-                isOpen === id
-                  ? style.questions__card__open_card
-                  : style.questions__card__close_card
-              }
-            >
-              <div className={style.questions__card__open_card2}>
+              <div className={style.questions__card__close_card}>
                 <h3
                   style={{
                     color: isOpen === id ? "var(--text-blue)" : "#fff",
@@ -41,15 +39,23 @@ const Questions = () => {
                   {ell.question}
                 </h3>
 
-                {isOpen === id && <p>{ell.answer}</p>}
+                <button
+                  className={style.questions__btn}
+                  onClick={() => setIsOpen(isOpen === id ? null : id)}
+                >
+                  {isOpen === id ? "−" : "+"}
+                </button>
               </div>
+            </div>
 
-              <button
-                className={style.questions__btn}
-                onClick={() => setIsOpen(isOpen === id ? null : id)}
-              >
-                {isOpen === id ? "-" : "+"}
-              </button>
+            <div
+              className={`${style.questions__card__answer} ${
+                isOpen === id ? style.questions__card__answer_open : ""
+              }`}
+            >
+              <div className={style.questions__card__answer_content}>
+                <p>{ell.answer}</p>
+              </div>
             </div>
           </div>
         ))}

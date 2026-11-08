@@ -12,7 +12,6 @@
 
   &__cards {
     padding-top: 72px;
-
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
@@ -24,19 +23,28 @@
 
   &__card {
     background-color: var(--bg-card);
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
     border-radius: 36px;
     padding: 30px 60px;
+
+    transition: background-color 0.3s ease;
+
+    &_bg {
+      background: #1e1e1e;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
 
     &__number_card {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
 
       border-radius: 12px;
-      padding: 20px;
       width: 80px;
       height: 80px;
 
@@ -49,14 +57,9 @@
       }
     }
 
-    &__open_card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
     &__close_card {
       width: 100%;
+      min-width: 0;
 
       display: flex;
       align-items: center;
@@ -64,21 +67,29 @@
       justify-content: space-between;
     }
 
-    &__open_card2 {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    &__answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.4s ease;
+
+      margin-left: 110px;
+
+      &_open {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    &__answer_content {
+      min-height: 0;
+      overflow: hidden;
 
       > p {
+        padding-top: 0;
         font-size: 1.125rem;
         line-height: 150%;
         color: var(--text-p-gray);
       }
     }
-  }
-
-  &__card_bg {
-    background: #1e1e1e;
   }
 
   &__h3 {
@@ -89,12 +100,14 @@
   }
 
   &__btn {
-    background-color: inherit;
+    flex-shrink: 0;
+    background-color: transparent;
     border: none;
     width: 34px;
     height: 34px;
     color: #fff;
     font-size: 3rem;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
