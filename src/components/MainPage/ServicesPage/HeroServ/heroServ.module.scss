@@ -1,0 +1,63 @@
+.heroServ {
+  background-color: var(--bg-card);
+  border-radius: 48px;
+  overflow: hidden;
+  margin-top: 58px;
+  padding-bottom: 76px;
+
+  position: relative;
+
+  &__textBox {
+    max-width: 645px;
+    width: 100%;
+
+    margin-top: 57px;
+    margin-left: 66px;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.9);
+
+    > span {
+      font-weight: 900;
+      color: var(--text-blue);
+    }
+  }
+
+  &__text {
+    margin-top: 39px;
+    font-size: 1rem;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.803);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+  &__img2 {
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    z-index: 1;
+  }
+
+  &__main_img {
+    width: 543px;
+    height: 482px;
+    position: absolute;
+    z-index: 5;
+    top: 42%;
+    right: -35px;
+
+    transform: translateY(-50%);
+  }
+}
