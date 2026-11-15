@@ -114,10 +114,10 @@ export const caseStudiesData: Case[] = [
   {
     id: 7,
     title: "E-commerce Personalization Engine",
-    category: caseImg7,
+    category: "Web Engineering",
     description:
       "AI-driven recommendation matrix tailored to shopper behavior, boosting conversion rates and average order value for global retailers.",
-    image: "/images/case-ecommerce.webp",
+    image: caseImg7,
     features: [
       "Real-time recommendation API",
       "Dynamic pricing algorithms",
