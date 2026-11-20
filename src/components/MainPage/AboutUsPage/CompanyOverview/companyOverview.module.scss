@@ -1,5 +1,9 @@
 .companyOverview {
   padding-top: 110px;
+  background-image: url("./../../../../assets/images/bg-frame.svg");
+  // background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
 
   display: flex;
   flex-direction: column;
