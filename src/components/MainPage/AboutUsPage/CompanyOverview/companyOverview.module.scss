@@ -1,0 +1,36 @@
+.companyOverview {
+  padding-top: 110px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  &__ourContainer_text {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__ourContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    &__p {
+      margin-top: 24px;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  > img {
+    max-width: 488px;
+    width: 100%;
+    height: 300px;
+  }
+}
