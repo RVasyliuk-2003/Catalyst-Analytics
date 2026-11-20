@@ -1,7 +1,6 @@
 import HeroUs from "./HeroUs/HeroUs";
 import Sub from "./Sub/Sub";
-import OurMission from "./OurMission/OurMission";
-import OurStory from "./OurStory/OurStory";
+import CompanyOverview from "./CompanyOverview/CompanyOverview";
 import CoreExpertise from "./CoreExpertise/CoreExpertise";
 import OurTrack from "./OurTrack/OurTrack";
 import OperationalImpact from "./Impact/OperationalImpact";
@@ -14,8 +13,7 @@ export default function AboutUs() {
     <div>
       <HeroUs />
       <Sub />
-      <OurStory />
-      <OurMission />
+      <CompanyOverview />
       <CoreExpertise />
       <OurTrack />
       <OperationalImpact />
